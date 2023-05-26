@@ -1,0 +1,246 @@
+%-------------------------
+% Resume in Latex
+% Author : Shicong Nie
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Shicong Nie} \\ \vspace{1pt}
+    \small 13026339196 $|$ \href{mailto:x@x.com}{\underline{niebayes@gmail.com}} $|$ 
+    % \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
+    \href{https://github.com/niebayes}{\underline{github.com/niebayes}}
+\end{center}
+
+\section{Summary}
+  \resumeSubHeadingListStart
+    \begin{itemize}
+        \item Open source enthusiast participating in Google Summer of Code with Jina AI and Open Source Promotion Plan with Apache Doris.
+        \item Passionate about technology, participated in PingCAP TinyKV Bootcamp and OceanBase miniob Database Competition.
+        \item Interested in distributed storage, implemented Multi-Raft, Multi-Paxos, and LSM-DB.
+        \item Strong self-motivation, studied renowned open courses such as MIT 6.824, CMU 15-445, MIT 6.S081, Harvard CS265.
+        \item Enthusiast in systems programming, familiar with distributed systems, database systems, and operating systems.
+        \item Skilled in fundamental data structures and algorithms, familiar with programming languages such as C/C++, Go, Python, Rust.
+        \item Interested in generative AI, multimodal AI, Neural Search, and AI infrastructure, actively learning related technologies.
+        \item Research experience in robot localization, multi-sensor fusion, and 3D vision, have a strong foundation in mathematics.
+    \end{itemize}
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Wuhan University of Technology}{Wuhan, China}
+      {Master degree, Major in Mechanical Engineering}{Sep. 2018 -- Jul. 2021}
+    \resumeSubheading
+      {Wuhan University of Technology}{Wuhan, China}
+      {Bachelor degree, Major in Mechanical Engineering}{Seq. 2014 -- Jul. 2018}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://github.com/niebayes/tinykv-summary}{\underline{Highly-Available Distributed Key-Value Database based on Multi-Raft}}
+}{}
+      {Raft, Percolator, Go}{}
+      \resumeItemListStart
+        \resumeItem{Consensus Layer: Implemented the Raft protocol supporting leader election, log replication, and log compaction. Implemented optimizations such as prevote, automatic step down, async apply, and flow control.}
+        \resumeItem{Service Layer: Supported single-point configuration change and region split. Utilized a scheduler for automatic region scheduling to achieve load balancing. Implemented read index to improve throughput.}
+        \resumeItem{Transaction Layer: Implemented MVCC based on the Percolator protocol.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://github.com/niebayes/LSM-DB}{\underline{Write-Optimized Key-Value Database based on LSM Tree}}
+}{}
+      {LSM tree, Rust}{}
+      \resumeItemListStart
+        \resumeItem{Supported insert, update, delete, and scan operations.}
+        \resumeItem{Implemented the memtable backed by a B-tree and designed the file format, Bloom filter, and sparse index for the sstable.}
+        \resumeItem{Designed and implemented a unified iterator interface for efficient data retrieval.}
+        \resumeItem{Supported leveled, tiered, and hybrid compaction strategies.}
+        \resumeItem{Implemented crash recovery using Write-Ahead Logging mechanism.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Open Source Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Google Summer of Code - Jina AI}{Apr. 2023 - Present}
+      {Contributor}{}
+      \resumeItemListStart
+        \resumeItem{Enhanced the stateful executor feature based on Raft protocol, wrapped relevant Go code into Python bindings using cgo library.}
+        \resumeItem{Implemented optimizations such as follower read and provided consistency mode options for service deployment in the stateful executor feature.}
+        \resumeItem{Developed a highly available and high-throughput neural search service using the Jina framework and ANNLite library.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Open Source Promotion Plan - Apache Doris}{May. 2023 - Present}
+      {Contributor}{}
+      \resumeItemListStart
+        \resumeItem{Added SQL parsing and execution support for functions like.}
+        \resumeItem{Added information about Segment Compaction in the Load Profile.}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+
+
+%-----------PROJECTS-----------
+\section{Other Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\href{https://github.com/niebayes/CMU-15-445-2020}{\underline{\textbf{bustub}}} $|$ \emph{Database Storage, C++}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented buffer pool manager, B+ tree index, extendable hash index, lock manager, and deadlock prevention for the bustub database.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://github.com/niebayes/miniob-summary}{\underline{\textbf{miniob}}} $|$ \emph{Database SQL, C++}}{}
+          \resumeItemListStart
+            \resumeItem{Added parsing and execution capabilities for SQL statements such as multi-row insert, multi-col update, cross join, inner join, order by, group by, having, sub-select, and aggregation to the miniob database.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://github.com/niebayes/MIT-6.S081-summary}{\underline{ \textbf{xv6}}} $|$ \emph{Operating System Kernel, C}}{}
+          \resumeItemListStart
+            \resumeItem{Added features like mmap, kernel thread, copy-on-write, lazy allocation, and compensated round-robin scheduling to the xv6 operating system.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://github.com/niebayes/Balancebeam}{\underline{\textbf{balancebeam}}} $|$ \emph{Proxy Server, Rust}}{}
+          \resumeItemListStart
+            \resumeItem{A proxy server with features such as health checks, thread pool, connection pool, cache management, rate limiting, and load balancing.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://github.com/niebayes/DEET-Debugger}{\underline{\textbf{deet}}} $|$ \emph{Debugger, Rust}}{}
+          \resumeItemListStart
+            \resumeItem{A debugger with common debugging commands like breakpoints, next, continue, and backtrace.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: C/C++, Go, Python, Rust} \\
+     \textbf{Frameworks or Libraries}{: Jina, DocArray, Apache Doris, Apache Spark, LevelDB, Hashicorp Raft, etcd Raft} \\
+     \textbf{Developer Tools}{: Linux, Git, Docker, CMake, VS Code, Vim, LaTeX} \\
+     \textbf{Languages}{: Mandarin (Native), English (Fluent)}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
